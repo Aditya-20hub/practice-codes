@@ -1,23 +1,20 @@
-def even_or_odd(a:int) -> bool:
+def is_even(a: int) -> bool:
     """
-    >>> assert even_or_odd(5) == 'odd'
+    >>> assert not is_even(5)
     
-    >>> assert even_or_odd(7) == 'even'
+    >>> assert not is_even(7)
     
-    >>> assert even_or_odd(0) == 'odd'
+    >>> assert is_even(0)
     
-    >>> assert even_or_odd(5) == 'odd'
+    >>> assert not is_even(5)
     
-    >>> assert even_or_odd(4) == 'even'
-    
-    
+    >>> assert is_even(4)
     """
     if a % 2 == 0:
-        return "even"
+        return True
     else:
-        return "odd"
+        return False
         
 if __name__ == '__main__':
-    whether_even_or_odd = even_or_odd (10)
-    print(whether_even_or_odd)
-    
+    whether_is_even = is_even(10)
+    print(whether_is_even)
