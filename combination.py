@@ -7,7 +7,7 @@ def fact(num: int) -> int:
     >>> assert fact(1) == 1
     """
     retval = 1
-    while num != 0:
+    while num > 0:
         retval *= num
         num -= 1
     return retval
@@ -20,7 +20,7 @@ def power(num: int, p: int) -> int:
     >>> assert power(8, 4) == 4096
     """
     retval = 1
-    while p != 0:
+    while p > 0:
         retval *= num
         p -= 1
     return retval
