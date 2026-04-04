@@ -1,6 +1,6 @@
 from combination import fact, power, combination
 
-def combine_sum (x:int, n:int) -> float:
+def combine_sum (x: int, n: int) -> float:
     """
     calculate 1combine_sum of x and n.
     
@@ -11,11 +11,12 @@ def combine_sum (x:int, n:int) -> float:
     retval = 0
     i = 0
     while i < n:
-        retval = retval + combination(n,n) * power(x,i) / fact(i)
+        retval = retval + combination(n, n-i) * power(x, i) / fact(i)
         i += 1
     return retval
     
   
   
 if __name__ == "__main__":
-        print(combine_sum(5, 8))  
+    print(combine_sum(5, 8))
+        
