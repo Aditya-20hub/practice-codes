@@ -1,21 +1,17 @@
-from combination import fact, power, conditional, combination
-
-def product_func(x:int) -> float:
-    
-    """
-    calculate the producte function of x.
-    
-    :param x: base values.
-    :return: product function of x
-    """
+def unit_func02(x: int) -> float:
     if x >= 4:
-        return f(x-1) - f(x-2) / f(x-3)
-    elif x == 3:
-        return 
+        return (unit_func02(x-1) - unit_func02(x-2)) / unit_func02(x-3) 
+    elif x == 3 or x == 2:
+        return math.sqrt(x)
     elif x == 1:
-        return 
+        return math.e
     elif x == 0:
-        return 3.14159
+        return math.pi
     else:
-    return("Invalid Input")
+        return ("Invalid Input")
+   
+   
+
+if __name__ == '__main__':
+    print(product_func(7))
     
